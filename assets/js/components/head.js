@@ -7,32 +7,22 @@ var Head = function() {
 Head.prototype.element = null;
 
 Head.prototype.Show = function(){
-
     let parent = this.element;
-    let head = Gen.Create('div', function(element) {
-        parent.className = 'head';
-    }, function(element) {
-        element.style.backgroundColor = 'rgb(15, 22, 39)';
-    }, parent, 150);
-
-    this.CreateLogo(head);
-    this.CreateText(head);
-
+    parent.className = 'head';
+    parent.style.backgroundColor = 'rgb(15, 22, 39)';
+    this.CreateLogo(parent);
+    this.CreateText(parent);
 };
 
 Head.prototype.CreateLogo = function(parent) {
     return Gen.Create('div', function(element) {
         element.className = 'logo';
-    }, function(element) {
-
-    }, parent, 250);
+    }, null, parent, 250);
 };
 
 Head.prototype.CreateText = function(parent) {
     return Gen.Create('div', function(element) {
         element.className = 'logo_content';
-        element.innerHTML = 'Text title';
-    }, function(element) {
-
-    }, parent, 450);
+        element.innerHTML = 'Magnetar Band';
+    }, null, parent, 450);
 };

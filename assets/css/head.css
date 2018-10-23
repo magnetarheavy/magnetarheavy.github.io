@@ -1,6 +1,8 @@
 
 .head {
 
+    display: flex;
+    flex-direction: row;
 
 }
 
@@ -9,7 +11,7 @@
     padding: 0;
     margin: 0;
 
-    display: inline-block;
+    display: block;
 
     width: 512px;
     height: 321px;
@@ -21,19 +23,13 @@
 .logo_content {
 
     font-size: 7em;
-
-    width: 50%;
+    position: relative;
     height: 50%;
+    top: 100px;
     overflow: hidden;
-    margin: auto;
-    position: absolute;
-    top: 0px;
-    left: 250px;
-    bottom: 0px;
-    right: 0px;
 
     color: #ff9000 !important;
 
-    display: inline-block;
+    display: block;
 
 }

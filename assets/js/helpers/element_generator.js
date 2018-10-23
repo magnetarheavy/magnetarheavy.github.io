@@ -18,6 +18,29 @@ Element.prototype.SetScale = function(value) {
     this.style.setProperty('transform',        scale);
 };
 
+Element.prototype.Hide = function() {
+    this.SetTransition(200);
+    this.SetScale(0);
+    this.style.left='0';
+    this.style.top='0';
+    this.style.width='0';
+    this.style.heigth='0';
+};
+
+Element.prototype.HideChilds = function(exclude) {
+    let instance = this;
+    instance.childNodes.forEach(function(child){
+        if(!isEmpty(exclude) && child==exclude)
+            return;
+        child.Hide();
+        setTimeout(function() {
+            if(!isEmpty(exclude) && child==exclude)
+                return;
+            instance.removeChild(child);
+        }, 200);
+    });
+};
+
 GeneratorHandler.prototype.Create = function(type,initCallback,endCallback,parent,delay) {
 
     let defDelay = isEmpty(delay)?500:delay;

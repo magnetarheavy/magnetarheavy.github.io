@@ -10,6 +10,7 @@ Footer.prototype.Show = function(){
     let instance = this;
     let parent = this.element;
     Gen.Create('div', function(footer){
+        footer.className='footer_content';
         footer.setAttribute('align','center');
         instance.ConstructIcons(footer);
     }, null, parent);
@@ -17,7 +18,7 @@ Footer.prototype.Show = function(){
 
 Footer.prototype.ConstructIcons = function(parent) {
     let icons = [
-        { style: 'icon_vk', description: 'vk.com' }
+        { style: 'icon_vk', description: 'official group in "vk.com"', url: 'https://vk.com/magnetar_heavy' }
     ];
     let instance = this;
     icons.forEach(function(icon){
@@ -29,6 +30,10 @@ Footer.prototype.ConstructIcons = function(parent) {
 };
 
 Footer.prototype.ConstructIcon = function(iconElement, icon) {
+    iconElement.SetTransition(150);
     iconElement.className+=icon.style;
     iconElement.title=icon.description;
+    iconElement.onclick = function() {
+        window.open(icon.url, '_blank').focus();
+    };
 };

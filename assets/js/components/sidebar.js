@@ -11,7 +11,7 @@ Sidebar.prototype.Show = function(){
     let instance = this;
     let parent = this.element;
 
-    Gen.Create('div', function(element){
+    Gen.Create('div', function(){
         parent.className='sidebar_hide';
     }, function(element){
         parent.className='sidebar';
@@ -53,7 +53,6 @@ Sidebar.prototype.ConstructMenuItem = function(element, item) {
         text.setAttribute('align','center');
         text.title=item.description;
         element.onclick=item.event;
-        text.onclick=item.event;
     },function(text){
         text.style.color='#fff';
         text.SetTransition(150);
