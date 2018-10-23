@@ -15,4 +15,4 @@ tmpElements.forEach(function(item){
 
 setTimeout(function(){
     showPage(window._content,'main');
-},1000);
+},600);

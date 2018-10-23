@@ -10,6 +10,7 @@ Footer.prototype.Show = function(){
     let instance = this;
     let parent = this.element;
     Gen.Create('div', function(footer){
+        footer.setAttribute('align','center');
         instance.ConstructIcons(footer);
     }, null, parent);
 };
@@ -21,12 +22,13 @@ Footer.prototype.ConstructIcons = function(parent) {
     let instance = this;
     icons.forEach(function(icon){
         Gen.Create('div', function(iconElement){
+            iconElement.className='icon ';
             instance.ConstructIcon(iconElement, icon);
         }, null, parent);
     });
 };
 
 Footer.prototype.ConstructIcon = function(iconElement, icon) {
-    iconElement.className+=' '+icon.style;
+    iconElement.className+=icon.style;
     iconElement.title=icon.description;
 };

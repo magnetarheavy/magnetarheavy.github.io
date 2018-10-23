@@ -34,7 +34,6 @@ GeneratorHandler.prototype.Create = function(type,initCallback,endCallback,paren
     setTimeout(function() {
 
         element.SetScale(1);
-        //element.style.backgroundColor = 'rgba(0,0,0,0)';
 
         if(!isEmpty(endCallback))
             endCallback(element);

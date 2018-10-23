@@ -18,5 +18,5 @@ function showPage(content, pageName){
         readPage(pageName, function(text){
             pageContent.innerHTML = text;
         });
-    }, null, content.element);
+    }, null, content.element, 100);
 }
