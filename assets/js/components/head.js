@@ -9,7 +9,6 @@ Head.prototype.element = null;
 Head.prototype.Show = function(){
     let parent = this.element;
     parent.className = 'head';
-    parent.style.backgroundColor = 'rgb(15, 22, 39)';
     this.CreateLogo(parent);
     this.CreateText(parent);
 };

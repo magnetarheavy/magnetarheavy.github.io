@@ -5,7 +5,7 @@ function isEmpty(obj) {
 }
 
 function readPage(pageName, callback) {
-    fetch('/assets/'+pageName+'.html').then(function(response) {
+    fetch('./assets/'+pageName+'.html').then(function(response) {
         response.text().then(function(text){
             callback(text);
         });
