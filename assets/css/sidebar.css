@@ -1,0 +1,40 @@
+
+.sidebar_hide {
+
+    display: block;
+    position: relative;
+    width: 0;
+    height: 0;
+
+}
+
+.sidebar {
+
+    display: block;
+    position: relative;
+
+    width: 512px;
+    height: 400px;
+
+}
+
+.sidebar_menu {
+
+}
+
+.sidebar_menu_item {
+
+    font-size: 3em;
+    cursor: pointer;
+
+    margin-bottom: 8px;
+
+}
+
+div.sidebar_menu_item_text:hover {
+    color: #ff9000 !important;
+}
+
+div.sidebar_menu_item_text:active {
+    color: #fff !important;
+}

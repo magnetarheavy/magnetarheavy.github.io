@@ -1,0 +1,30 @@
+
+.footer {
+
+    position: absolute;
+    display: block;
+
+    height: 64px;
+    width:100%;
+    border: solid 1px #fff;
+
+    horiz-align: center;
+
+    bottom: 0;
+
+}
+
+.icon {
+
+    position: relative;
+    width: 32px;
+    height: 32px;
+
+}
+
+.icon_vk {
+
+    background: url('../img/icon_vk.png') no-repeat;
+    background-size: 32px 32px;
+
+}

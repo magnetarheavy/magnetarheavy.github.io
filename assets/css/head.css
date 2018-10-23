@@ -1,0 +1,39 @@
+
+.head {
+
+
+}
+
+.logo {
+
+    padding: 0;
+    margin: 0;
+
+    display: inline-block;
+
+    width: 512px;
+    height: 321px;
+    background: url('../img/logo.png') no-repeat;
+    background-size: 512px 321px;
+
+}
+
+.logo_content {
+
+    font-size: 7em;
+
+    width: 50%;
+    height: 50%;
+    overflow: hidden;
+    margin: auto;
+    position: absolute;
+    top: 0px;
+    left: 250px;
+    bottom: 0px;
+    right: 0px;
+
+    color: #ff9000 !important;
+
+    display: inline-block;
+
+}
