@@ -26,7 +26,7 @@
     display: inline-block;
 
     background-color: #0f1627;
-    color: #ff9000 !important;
+    color: #ffffff;
 
     -webkit-transition: all 300ms;
     -moz-transition: all 300ms;
@@ -36,12 +36,32 @@
     margin: 20px;
     padding: 20px;
 
+    cursor: default;
+
     width: 100%;
 
 }
 
 img {
+    max-width: 100%;
+}
 
-    max-width: 640px;
+.page {
+    color: #ffffff !important;
+}
 
+b,i,u,s {
+    color: #ff9000 !important;
+    -webkit-transition: all 150ms;
+    -moz-transition: all 150ms;
+    -o-transition: all 150ms;
+    transition: all 150ms;
+}
+
+b:active,i:active,u:active,s:active {
+    color: #ff9000 !important;
+}
+
+b:hover,i:hover,u:hover,s:hover {
+    color: #ffff00 !important;
 }

@@ -1,4 +1,11 @@
 
+.head_hide {
+    -webkit-transition: all 300ms;
+    -moz-transition: all 300ms;
+    -o-transition: all 300ms;
+    transition: all 300ms;
+}
+
 .head {
 
     display: flex;
@@ -6,6 +13,10 @@
 
     background-color: #0f1627 !important;
 
+    -webkit-transition: all 300ms;
+    -moz-transition: all 300ms;
+    -o-transition: all 300ms;
+    transition: all 300ms;
 }
 
 .logo {
@@ -24,15 +35,14 @@
 
 .logo_content {
 
-    font-size: 7vw;
-
+    display: block;
     position: relative;
     height: 50%;
     top: 100px;
     overflow: hidden;
+    margin: 40px;
 
+    font-size: 7vw;
     color: #ff9000 !important;
-
-    display: block;
 
 }

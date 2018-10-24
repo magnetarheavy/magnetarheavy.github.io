@@ -1,6 +1,15 @@
 
 let GeneratorHandler = function() { };
 
+Element.prototype.AddStyle = function(style) {
+    this.RemoveStyle(style);
+    this.className += ' '+style;
+};
+
+Element.prototype.RemoveStyle = function(style) {
+    this.className = this.className.replace(style,'');
+};
+
 Element.prototype.SetTransition = function(delay) {
     let time = 'all '+delay+'ms';
     this.style.setProperty('-webkit-transition',time);
@@ -47,6 +56,7 @@ GeneratorHandler.prototype.Create = function(type,initCallback,endCallback,paren
     let element = document.createElement(type);
     element.SetScale(0.01);
     element.SetTransition(defDelay);
+    element.style.backgroundColor = 'rgba(0, 0, 0, 0)';
     element.style.color = 'rgba(0, 0, 0, 0)';
 
     if(!isEmpty(parent))
@@ -56,6 +66,8 @@ GeneratorHandler.prototype.Create = function(type,initCallback,endCallback,paren
 
     setTimeout(function() {
 
+        element.style.backgroundColor=null;
+        element.style.color=null;
         element.SetScale(1);
 
         if(!isEmpty(endCallback))

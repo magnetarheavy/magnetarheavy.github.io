@@ -4,8 +4,9 @@ var Sidebar = function() {
     this.element = document.getElementById('sidebar');
 };
 
-Sidebar.prototype.items   = null;
-Sidebar.prototype.element = null;
+Sidebar.prototype.selected = null;
+Sidebar.prototype.items    = null;
+Sidebar.prototype.element  = null;
 
 Sidebar.prototype.Show = function(){
     let instance = this;
@@ -35,10 +36,10 @@ Sidebar.prototype.Show = function(){
 Sidebar.prototype.ConstructMenu = function(menu) {
     let delay = 0;
     let instance = this;
-    this.items.forEach(function(item){
+    this.items.forEach(function(item,i){
         Gen.Create('div', function(element){
             element.className='sidebar_menu_item';
-            instance.ConstructMenuItem(element, item);
+            instance.ConstructMenuItem(element, item, i);
         }, function(element){
             element.style.backgroundColor='rgb(0, 0, 0)';
         }, menu, delay);
@@ -46,15 +47,31 @@ Sidebar.prototype.ConstructMenu = function(menu) {
     });
 };
 
-Sidebar.prototype.ConstructMenuItem = function(element, item) {
+Sidebar.prototype.ConstructMenuItem = function(element, item, i) {
+    let instance = this;
     Gen.Create('div',function(text){
+
         text.className='sidebar_menu_item_text';
         text.innerHTML=item.caption;
         text.setAttribute('align','center');
         text.title=item.description;
-        element.onclick=item.event;
+
+        element.onclick = function(){
+
+            if(!isEmpty(instance.selected))
+                instance.selected.RemoveStyle('sidebar_menu_item_text_selected');
+
+            element.AddStyle('sidebar_menu_item_text_selected');
+            item.event();
+
+            instance.selected = element;
+
+        };
+
+        if(i===0)
+            element.onclick();
+
     },function(text){
-        text.style.color='#fff';
         text.SetTransition(150);
     },element);
 };
