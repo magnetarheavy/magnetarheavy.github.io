@@ -34,6 +34,6 @@ Footer.prototype.ConstructIcon = function(iconElement, icon) {
     iconElement.className+=icon.style;
     iconElement.title=icon.description;
     iconElement.onclick = function() {
-        window.open(icon.url, '_blank').focus();
+        openTab(icon.url);
     };
 };
