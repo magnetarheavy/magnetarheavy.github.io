@@ -8,6 +8,15 @@
     margin-bottom: 40px;
 }
 
+.album_title_ru {
+    display: inline-block;
+}
+
+.album_title_en {
+    font-size: 0.9em;
+    display: inline-block;
+}
+
 .album_date {
     color: #fff;
     font-size: 0.7em;
@@ -41,13 +50,42 @@ img.album_image {
 .album_track_title {
     display: block;
     position: relative;
-    top: 0px;
-    width: 50%;
+    top: 0;
+    width: 80%;
     font-size: 2em;
 }
 
+.album_track_title_ru {
+    display: inline-block;
+}
+
+.album_track_title_en {
+    display: inline-block;
+    font-size: 0.8em;
+}
+
 .album_track_description {
-    font-size: 1em;
+    margin-top: 8px;
+    font-size: 1.3em;
+    cursor: pointer;
+    color: #444444;
+}
+
+.album_track_description:hover {
+    color: #ffff00 !important;
+}
+
+.album_track_description:active {
+    color: #ffffff !important;
+}
+
+.album_track_text {
+    display: block;
+    color: #ffffff !important;
+}
+
+.album_track_text_hide {
+    display: none;
 }
 
 .album_track_buttons {
@@ -56,6 +94,7 @@ img.album_image {
 
 .album_track_button {
     cursor: pointer;
+    display: inline-block;
     right: 0px;
     background-repeat: no-repeat;
     margin-left: 8px;
@@ -84,11 +123,15 @@ img.album_image {
 }
 
 .album_track_button_download {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjEuMWMqnEsAAALhSURBVFhH7ZdLaBNRFIZvtaI2mtxJKqU0mtybaRMfTUtbaxfW1lAr4qI+QBHFlWvdCIKgqGhxIbgRceXWnStFEBdqba222J2IK6WPtCrYFkHxkevJeGiTmTPN5FWzyAcfgck95/yZmWRumFKqpCUPlpJlypQpClw0gufBe+BDpon78Hqd+WQM3l3xb9H/oFo0QJBHTJPKVi7eMi20FyuWEU3ug+HzlkC0CbAfK5cBHtwFl/GHKYQDxRXsUEQ06WFcTlmHOzIBZ73T6OP3r121ob7JuE0Kep9q4jIx2LlcDMHrNfiQ31KOf2BeeRAn5EUFNJ5IaVxI/8CX6SjOyRFfMEw0TjPWd1x9nZ1Ts3PzhvGZT8onW8i1VsVnFgiswWk5wMV+uvGix06dgU1HOoHoTnItqcf47cwRHuojm6ZIB+wk11Ku9OqHcVqWeAMd0GDM3NBs3mcw+VTKGh46CffHT7KhyfwCiveM6atxqkN4sAsKf9ENreZ7icEv4DnGuioxwZJUws/KO1ODNKv1NrWlo3fBsxf6MdYiPQdOLLy/eUevctVtI3ulmdx06JnOpkceIotTfPpiGGM45+qNW2Qvi1zcwSQ2aOIuWZiibO5SH8cncXRmkh/IVbeV7EWYYJ5AM6Yh4GKQKLIYaulW4xNTGMGeZ4OvlMvv4PKmKW5iGgJNjNJFVvXW3WpiMo5RrAy8HFHrsg5n+BzTEHC59GbUZH1bTE3GpzHSIoPDo2r9xkayJrNwkmzRxCW6yN7w9h41NT2D0ZQaev1GuTdFybUOfYxpCNwhHRbALoMstDXSvsfYJAyPjClPoIlc41ivvIhpbODiNlmYwZpwezbfVlouvzOv7sckNtTWVkHI5CaTblJMuTyNKTLg1d0Q8gHZpDjCX4NMl9ZKBdOCRyDoADT4bWpYKOGZL54wT6gbZ+ZITdTFfOFwVW2ktVAyX0PE6FumTKkDT6eSljxYSpIHS0fF/gI6vkk7992LNQAAAABJRU5ErkJggg==');
+    background-image: url('../img/button_download.png');
+}
+
+.album_track_button_tabs {
+    background-image: url('../img/button_download_tabs.png');
 }
 
 .player_audio {
-    width:50%;
+    width: 70%;
     position: relative;
     display: inline-block;
     background: #0f1627;

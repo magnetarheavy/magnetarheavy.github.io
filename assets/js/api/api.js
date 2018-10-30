@@ -9,12 +9,20 @@ Array.prototype.insert = function(item,index) {
     this.splice(defIndex, 0, item);
 };
 
-function readPage(pageName, callback) {
-    fetch('/assets/'+pageName+'.html').then(function(response) {
+function read(url, callback){
+    fetch(url).then(function(response) {
         response.text().then(function(text){
             callback(text);
         });
     });
+}
+
+function readPage(pageName, callback) {
+    read('/assets/'+pageName+'.html', callback);
+}
+
+function readText(textName, callback) {
+    read('/assets/musics/'+textName+'.txt', callback);
 }
 
 function openTab(url){
