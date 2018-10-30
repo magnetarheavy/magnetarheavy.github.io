@@ -22,7 +22,7 @@ function readPage(pageName, callback) {
 }
 
 function readText(textName, callback) {
-    read('/assets/musics/'+textName+'.txt', callback);
+    read(textName, callback);
 }
 
 function openTab(url){
