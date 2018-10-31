@@ -6,6 +6,7 @@
     color: #ff9000;
     font-size: 5em;
     margin-bottom: 40px;
+    text-shadow: 4px 4px 2px #000;
 }
 
 .album_title_ru {
@@ -29,6 +30,12 @@ img.album_image {
     width: auto;
     border-radius: 2px;
     border: solid 2px #ff9000;
+}
+
+div.album_description {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 2em;
 }
 
 .album_track {

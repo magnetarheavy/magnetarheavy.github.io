@@ -38,9 +38,10 @@
     display: block;
     position: relative;
     height: 50%;
-    top: 100px;
     overflow: hidden;
-    margin: 40px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
 
     text-shadow: 4px 4px 2px #000;
     font-size: 7vw;

@@ -16,6 +16,7 @@ Sidebar.prototype.Show = function(){
         parent.className='sidebar_hide';
     }, function(element){
         parent.className='sidebar';
+        element.className='sidebar_container';
         parent.style.backgroundColor='rgb(15, 22, 39)';
         Gen.Create('div', function(menu) {
             instance.ConstructMenu(menu);

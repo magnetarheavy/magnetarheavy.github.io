@@ -1,16 +1,10 @@
 
 .footer {
-
     position: absolute;
-    display: block;
-
+    display: inline-block;
     height: 64px;
-    width:100%;
-
-    horiz-align: center;
-
-    bottom: 28px;
-
+    margin-right: 20px;
+    right: 0;
 }
 
 .footer_content {

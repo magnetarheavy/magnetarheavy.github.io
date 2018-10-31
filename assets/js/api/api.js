@@ -10,7 +10,7 @@ Array.prototype.insert = function(item,index) {
 };
 
 function read(url, callback){
-    fetch(url).then(function(response) {
+    fetch('.'+url).then(function(response) {
         response.text().then(function(text){
             callback(text);
         });

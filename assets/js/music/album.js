@@ -12,6 +12,7 @@ Album.prototype.Show = function(parent) {
         element.className='album';
         instance.CreateTitle(element);
         instance.CreateImage(element);
+        instance.CreateDescription(element);
         instance.album.tracks.forEach(function(track,i) {
             instance.CreateTrack(element,track,i);
         });
@@ -47,6 +48,13 @@ Album.prototype.CreateImage = function(albumElement) {
     albumElement.appendChild(image);
 };
 
+Album.prototype.CreateDescription = function(albumElement) {
+    let description = document.createElement('div');
+    description.className = 'album_description';
+    description.innerHTML = this.album.description;
+    albumElement.appendChild(description);
+};
+
 Album.prototype.CreateTrack = function(albumElement, track, i) {
     let instance = this;
     return Gen.Create('div',function(trackElement){
@@ -56,7 +64,7 @@ Album.prototype.CreateTrack = function(albumElement, track, i) {
         instance.CreateTrackPlayer(trackElement,track,i);
         instance.CreateTrackButtons(trackElement,track,i);
         instance.CreateTrackDescription(trackElement,track,i);
-    }, null, albumElement, i*250);
+    }, null, albumElement, 200);
 };
 
 Album.prototype.CreateTrackTitle = function(trackElement, track, i) {
@@ -74,7 +82,7 @@ Album.prototype.CreateTrackTitle = function(trackElement, track, i) {
         title.appendChild(ruName);
         title.appendChild(enName);
 
-    }, null, trackElement, i*300);
+    }, null, trackElement, 200);
 };
 
 Album.prototype.CreateTrackPlayer = function(trackElement, track) {
@@ -87,7 +95,7 @@ Album.prototype.CreateTrackButtons = function(trackElement, track, i) {
         buttons.className = 'album_track_buttons';
         instance.CreateTrackButtonDownload(buttons,track);
         instance.CreateTrackButtonTabs(buttons,track);
-    }, null,trackElement, i*350);
+    }, null, trackElement, 300);
 };
 
 Album.prototype.CreateTrackButtonDownload = function(buttons, track) {
@@ -122,7 +130,7 @@ Album.prototype.CreateTrackDescription = function(trackElement, track, i) {
         description.onclick=function(){
             text.className = text.className==='album_track_text_hide'?'album_track_text':'album_track_text_hide';
         };
-    }, trackElement, i*300);
+    }, trackElement, 200);
 };
 
 Album.prototype.CreateTrackText = function(descriptionElement, track, i) {
@@ -132,5 +140,5 @@ Album.prototype.CreateTrackText = function(descriptionElement, track, i) {
         readText(track.text, function(text){
             textElement.innerHTML = text;
         });
-    }, null, descriptionElement, i*300);
+    }, null, descriptionElement, 200);
 };
