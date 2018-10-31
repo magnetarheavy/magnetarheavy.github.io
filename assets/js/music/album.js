@@ -48,10 +48,16 @@ Album.prototype.CreateImage = function(albumElement) {
     albumElement.appendChild(image);
 };
 
+Album.prototype.TrackCount = function() {
+    let trackCount = 0;
+    this.album.tracks.forEach(function(){ trackCount++; });
+    return trackCount;
+};
+
 Album.prototype.CreateDescription = function(albumElement) {
     let description = document.createElement('div');
     description.className = 'album_description';
-    description.innerHTML = this.album.description;
+    description.innerHTML = this.album.description+'Album includes '+this.TrackCount()+' tracks:';
     albumElement.appendChild(description);
 };
 

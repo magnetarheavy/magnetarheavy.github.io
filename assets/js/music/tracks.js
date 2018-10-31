@@ -5,7 +5,7 @@ const Albums = [
         en_name: 'Raven',
         date: '2018',
         image: 'assets/img/album_voron.jpg',
-        description: 'Album includes 9 tracks:',
+        description: '',
         tracks: [
             {
                 name: 'В Снах Героев',

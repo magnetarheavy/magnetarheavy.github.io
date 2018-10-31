@@ -4,7 +4,7 @@
 
 .album_title {
     color: #ff9000;
-    font-size: 5em;
+    font-size: 2.5em;
     margin-bottom: 40px;
     text-shadow: 4px 4px 2px #000;
 }
@@ -35,7 +35,7 @@ img.album_image {
 div.album_description {
     margin-top: 20px;
     margin-bottom: 40px;
-    font-size: 2em;
+    font-size: 1em;
 }
 
 .album_track {
@@ -59,7 +59,7 @@ div.album_description {
     position: relative;
     top: 0;
     width: 80%;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 .album_track_title_ru {
@@ -73,7 +73,7 @@ div.album_description {
 
 .album_track_description {
     margin-top: 8px;
-    font-size: 1.3em;
+    font-size: 1em;
     cursor: pointer;
     color: #444444;
 }
@@ -102,7 +102,7 @@ div.album_description {
 .album_track_button {
     cursor: pointer;
     display: inline-block;
-    right: 0px;
+    right: 0;
     background-repeat: no-repeat;
     margin-left: 8px;
     margin-top: 4px;
